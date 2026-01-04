@@ -1,0 +1,2017 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "d93bdb7d-4e17-3fa7-c006-22378dacd792",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+          ]
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "d93bdb7d-4e17-3fa7-c006-22378dacd792"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "EMER"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "50849002",
+                "display": "Emergency room admission (procedure)"
+              }
+            ],
+            "text": "Emergency room admission (procedure)"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5",
+          "display": "Ms. Waltraud488 Hermann103"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ],
+                "text": "primary performer"
+              }
+            ],
+            "period": {
+              "start": "2023-05-16T13:01:24+08:00",
+              "end": "2023-05-16T14:01:24+08:00"
+            },
+            "individual": {
+              "reference": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999881292",
+              "display": "Dr. Domonique463 Satterfield305"
+            }
+          }
+        ],
+        "period": {
+          "start": "2023-05-16T13:01:24+08:00",
+          "end": "2023-05-16T14:01:24+08:00"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location?identifier=https://github.com/synthetichealth/synthea|b64fdbb3-9be7-317c-a90d-fa24b912c836",
+              "display": "BLUEBERRY HILL REHABILITATION AND HEALTHCARE CTR"
+            }
+          }
+        ],
+        "serviceProvider": {
+          "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|ee7fab6f-6438-394f-b1f2-3e452f8f055a",
+          "display": "BLUEBERRY HILL REHABILITATION AND HEALTHCARE CTR"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eae1ce8f-6623-3af4-57cb-47f423a74c16",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "eae1ce8f-6623-3af4-57cb-47f423a74c16",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "314529007",
+              "display": "Medication review due (situation)"
+            }
+          ],
+          "text": "Medication review due (situation)"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "onsetDateTime": "2023-05-16T13:01:24+08:00",
+        "abatementDateTime": "2023-05-23T13:01:24+08:00",
+        "recordedDate": "2023-05-16T13:01:24+08:00"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:27d0ec88-72ac-aba3-9d5d-a6c6cd26c0bd",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "27d0ec88-72ac-aba3-9d5d-a6c6cd26c0bd",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2345-7",
+              "display": "Glucose [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Glucose [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueQuantity": {
+          "value": 102.48,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3a5e44c7-5b5e-878d-ff49-186811efc081",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "3a5e44c7-5b5e-878d-ff49-186811efc081",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3094-0",
+              "display": "Urea nitrogen [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Urea nitrogen [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueQuantity": {
+          "value": 15.9,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5d2359ab-de12-8f32-ff5c-83890cb527b7",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "5d2359ab-de12-8f32-ff5c-83890cb527b7",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Creatinine [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueQuantity": {
+          "value": 1.9693,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:826327bd-b4aa-68ea-a559-a2c60552332a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "826327bd-b4aa-68ea-a559-a2c60552332a",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "17861-6",
+              "display": "Calcium [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Calcium [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueQuantity": {
+          "value": 8.6,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2c3b4f5d-06fc-43cd-0989-faf6637d059a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "2c3b4f5d-06fc-43cd-0989-faf6637d059a",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2951-2",
+              "display": "Sodium [Moles/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Sodium [Moles/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueQuantity": {
+          "value": 143.55,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bd8b08f2-fef7-fc92-fb27-49f99e17bca3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bd8b08f2-fef7-fc92-fb27-49f99e17bca3",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Potassium [Moles/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueQuantity": {
+          "value": 5.02,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:836f81e4-e401-4741-b85e-ae13c38911ef",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "836f81e4-e401-4741-b85e-ae13c38911ef",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2075-0",
+              "display": "Chloride [Moles/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Chloride [Moles/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueQuantity": {
+          "value": 101.92,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eb54272b-db50-683d-c569-04955a2265d8",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "eb54272b-db50-683d-c569-04955a2265d8",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2028-9",
+              "display": "Carbon dioxide, total [Moles/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Carbon dioxide, total [Moles/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueQuantity": {
+          "value": 24.06,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:333dffda-3509-5050-031b-d0a3a6954036",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "333dffda-3509-5050-031b-d0a3a6954036",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "33914-3",
+              "display": "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)"
+            }
+          ],
+          "text": "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueQuantity": {
+          "value": 52.106,
+          "unit": "mL/min/{1.73_m2}",
+          "system": "http://unitsofmeasure.org",
+          "code": "mL/min/{1.73_m2}"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:01bf3db6-15dc-cfbf-f433-05274e65acc9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "01bf3db6-15dc-cfbf-f433-05274e65acc9",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5767-9",
+              "display": "Appearance of Urine"
+            }
+          ],
+          "text": "Appearance of Urine"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "7766007",
+              "display": "Cloudy urine (finding)"
+            }
+          ],
+          "text": "Cloudy urine (finding)"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6869a93b-0c03-aa0c-d59a-05688c36a9ac",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "6869a93b-0c03-aa0c-d59a-05688c36a9ac",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "34533-0",
+              "display": "Odor of Urine"
+            }
+          ],
+          "text": "Odor of Urine"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "167248002",
+              "display": "Urine smell ammoniacal (finding)"
+            }
+          ],
+          "text": "Urine smell ammoniacal (finding)"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3f8cfa08-48fa-331f-9603-9498085366c7",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "3f8cfa08-48fa-331f-9603-9498085366c7",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "32167-9",
+              "display": "Clarity of Urine"
+            }
+          ],
+          "text": "Clarity of Urine"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "300828005",
+              "display": "Translucent (qualifier value)"
+            }
+          ],
+          "text": "Translucent (qualifier value)"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2a9c9aa7-0a09-c8f5-16b3-55d27fbcd453",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "2a9c9aa7-0a09-c8f5-16b3-55d27fbcd453",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5778-6",
+              "display": "Color of Urine"
+            }
+          ],
+          "text": "Color of Urine"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "371254008",
+              "display": "Brown color (qualifier value)"
+            }
+          ],
+          "text": "Brown color (qualifier value)"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:934a8d6a-d70a-c405-c9de-833c0036c06a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "934a8d6a-d70a-c405-c9de-833c0036c06a",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5792-7",
+              "display": "Glucose [Mass/volume] in Urine by Test strip"
+            }
+          ],
+          "text": "Glucose [Mass/volume] in Urine by Test strip"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueQuantity": {
+          "value": 1.7023,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5faa7ab8-f7f0-a04d-3c04-5f53d2c437b9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "5faa7ab8-f7f0-a04d-3c04-5f53d2c437b9",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "25428-4",
+              "display": "Glucose [Presence] in Urine by Test strip"
+            }
+          ],
+          "text": "Glucose [Presence] in Urine by Test strip"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "167265006",
+              "display": "Urine glucose test = ++ (finding)"
+            }
+          ],
+          "text": "Urine glucose test = ++ (finding)"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3a0d7eab-e06a-5737-5f29-caa0632aa567",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "3a0d7eab-e06a-5737-5f29-caa0632aa567",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "20505-4",
+              "display": "Bilirubin.total [Mass/volume] in Urine by Test strip"
+            }
+          ],
+          "text": "Bilirubin.total [Mass/volume] in Urine by Test strip"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueQuantity": {
+          "value": 0.84877,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6f051453-c9a4-aeaf-18d3-f4f542728bab",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "6f051453-c9a4-aeaf-18d3-f4f542728bab",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5770-3",
+              "display": "Bilirubin.total [Presence] in Urine by Test strip"
+            }
+          ],
+          "text": "Bilirubin.total [Presence] in Urine by Test strip"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "275778006",
+              "display": "Finding of bilirubin in urine (finding)"
+            }
+          ],
+          "text": "Finding of bilirubin in urine (finding)"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a6484ce0-1a59-3db0-f8fe-c4d39045b60f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a6484ce0-1a59-3db0-f8fe-c4d39045b60f",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5797-6",
+              "display": "Ketones [Mass/volume] in Urine by Test strip"
+            }
+          ],
+          "text": "Ketones [Mass/volume] in Urine by Test strip"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueQuantity": {
+          "value": 16.265,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6b30fbfb-33dc-0350-fcd3-85ebeda2cccb",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "6b30fbfb-33dc-0350-fcd3-85ebeda2cccb",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2514-8",
+              "display": "Ketones [Presence] in Urine by Test strip"
+            }
+          ],
+          "text": "Ketones [Presence] in Urine by Test strip"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "167290008",
+              "display": "Urine ketone test = ++ (finding)"
+            }
+          ],
+          "text": "Urine ketone test = ++ (finding)"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:366d1979-fb55-83b1-3863-aa02e816c1b3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "366d1979-fb55-83b1-3863-aa02e816c1b3",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5811-5",
+              "display": "Specific gravity of Urine by Test strip"
+            }
+          ],
+          "text": "Specific gravity of Urine by Test strip"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueQuantity": {
+          "value": 1.0275,
+          "unit": "{nominal}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{nominal}"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f8b370eb-55d1-865e-802a-2edcacd6e451",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "f8b370eb-55d1-865e-802a-2edcacd6e451",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5803-2",
+              "display": "pH of Urine by Test strip"
+            }
+          ],
+          "text": "pH of Urine by Test strip"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueQuantity": {
+          "value": 5.3315,
+          "unit": "pH",
+          "system": "http://unitsofmeasure.org",
+          "code": "pH"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ecb4850b-e616-f1f2-7f4f-200a1afbaeb5",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ecb4850b-e616-f1f2-7f4f-200a1afbaeb5",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5804-0",
+              "display": "Protein [Mass/volume] in Urine by Test strip"
+            }
+          ],
+          "text": "Protein [Mass/volume] in Urine by Test strip"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueQuantity": {
+          "value": 300.57,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:af85a00a-b35f-b410-872a-241166309458",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "af85a00a-b35f-b410-872a-241166309458",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "20454-5",
+              "display": "Protein [Presence] in Urine by Test strip"
+            }
+          ],
+          "text": "Protein [Presence] in Urine by Test strip"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "167276005",
+              "display": "Urine protein test = ++ (finding)"
+            }
+          ],
+          "text": "Urine protein test = ++ (finding)"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a104b357-0ff2-107e-dff7-3927d518b31f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a104b357-0ff2-107e-dff7-3927d518b31f",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5802-4",
+              "display": "Nitrite [Presence] in Urine by Test strip"
+            }
+          ],
+          "text": "Nitrite [Presence] in Urine by Test strip"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "314138001",
+              "display": "Nitrite not detected in urine (finding)"
+            }
+          ],
+          "text": "Nitrite not detected in urine (finding)"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:79426103-c87d-e6f1-fde9-2107377971f7",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "79426103-c87d-e6f1-fde9-2107377971f7",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5794-3",
+              "display": "Hemoglobin [Presence] in Urine by Test strip"
+            }
+          ],
+          "text": "Hemoglobin [Presence] in Urine by Test strip"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "167297006",
+              "display": "Blood not detected in urine (finding)"
+            }
+          ],
+          "text": "Blood not detected in urine (finding)"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bb58c3f1-7c21-212c-3005-1940f176bc80",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bb58c3f1-7c21-212c-3005-1940f176bc80",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5799-2",
+              "display": "Leukocyte esterase [Presence] in Urine by Test strip"
+            }
+          ],
+          "text": "Leukocyte esterase [Presence] in Urine by Test strip"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "394717006",
+              "display": "Urine leukocytes not detected (finding)"
+            }
+          ],
+          "text": "Urine leukocytes not detected (finding)"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3e64ecf7-ccfa-32c6-697c-25240c41c0fe",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "3e64ecf7-ccfa-32c6-697c-25240c41c0fe",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+            }
+          ],
+          "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "valueQuantity": {
+          "value": 4.61,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fdc63552-b350-e1bb-f1fc-c123a1ef2b10",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "fdc63552-b350-e1bb-f1fc-c123a1ef2b10",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "stopped",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "community",
+                "display": "Community"
+              }
+            ],
+            "text": "Community"
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "106892",
+              "display": "insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]"
+            }
+          ],
+          "text": "insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "authoredOn": "2023-05-16T13:01:24+08:00",
+        "requester": {
+          "reference": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999881292",
+          "display": "Dr. Domonique463 Satterfield305"
+        },
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:4b4eef24-87d9-47ff-3b79-e8c0b865de88",
+            "display": "Diabetes mellitus type 2 (disorder)"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationRequest"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4a04b5f6-d06c-b8f8-6936-8b25a743a8ea",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "4a04b5f6-d06c-b8f8-6936-8b25a743a8ea",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "stopped",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "community",
+                "display": "Community"
+              }
+            ],
+            "text": "Community"
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "310798",
+              "display": "Hydrochlorothiazide 25 MG Oral Tablet"
+            }
+          ],
+          "text": "Hydrochlorothiazide 25 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "authoredOn": "2023-05-16T13:01:24+08:00",
+        "requester": {
+          "reference": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999881292",
+          "display": "Dr. Domonique463 Satterfield305"
+        },
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:16e22650-65f3-d451-1d05-564acf98f0e7",
+            "display": "Essential hypertension (disorder)"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "sequence": 1,
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1.0,
+                "periodUnit": "d"
+              }
+            },
+            "asNeededBoolean": false,
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                      "code": "ordered",
+                      "display": "Ordered"
+                    }
+                  ]
+                },
+                "doseQuantity": {
+                  "value": 1.0
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationRequest"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f88e2878-27ae-dc04-13db-6d4dc990d654",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "f88e2878-27ae-dc04-13db-6d4dc990d654",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24321-2",
+              "display": "Basic metabolic 2000 panel - Serum or Plasma"
+            }
+          ],
+          "text": "Basic metabolic 2000 panel - Serum or Plasma"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "performer": [
+          {
+            "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|ee7fab6f-6438-394f-b1f2-3e452f8f055a",
+            "display": "BLUEBERRY HILL REHABILITATION AND HEALTHCARE CTR"
+          }
+        ],
+        "result": [
+          {
+            "reference": "urn:uuid:27d0ec88-72ac-aba3-9d5d-a6c6cd26c0bd",
+            "display": "Glucose [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:3a5e44c7-5b5e-878d-ff49-186811efc081",
+            "display": "Urea nitrogen [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:5d2359ab-de12-8f32-ff5c-83890cb527b7",
+            "display": "Creatinine [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:826327bd-b4aa-68ea-a559-a2c60552332a",
+            "display": "Calcium [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:2c3b4f5d-06fc-43cd-0989-faf6637d059a",
+            "display": "Sodium [Moles/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:bd8b08f2-fef7-fc92-fb27-49f99e17bca3",
+            "display": "Potassium [Moles/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:836f81e4-e401-4741-b85e-ae13c38911ef",
+            "display": "Chloride [Moles/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:eb54272b-db50-683d-c569-04955a2265d8",
+            "display": "Carbon dioxide, total [Moles/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "urn:uuid:333dffda-3509-5050-031b-d0a3a6954036",
+            "display": "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e785693b-d685-215d-4c08-b3dbad753211",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "e785693b-d685-215d-4c08-b3dbad753211",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24357-6",
+              "display": "Urinalysis macro (dipstick) panel - Urine"
+            }
+          ],
+          "text": "Urinalysis macro (dipstick) panel - Urine"
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "performer": [
+          {
+            "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|ee7fab6f-6438-394f-b1f2-3e452f8f055a",
+            "display": "BLUEBERRY HILL REHABILITATION AND HEALTHCARE CTR"
+          }
+        ],
+        "result": [
+          {
+            "reference": "urn:uuid:01bf3db6-15dc-cfbf-f433-05274e65acc9",
+            "display": "Appearance of Urine"
+          },
+          {
+            "reference": "urn:uuid:6869a93b-0c03-aa0c-d59a-05688c36a9ac",
+            "display": "Odor of Urine"
+          },
+          {
+            "reference": "urn:uuid:3f8cfa08-48fa-331f-9603-9498085366c7",
+            "display": "Clarity of Urine"
+          },
+          {
+            "reference": "urn:uuid:2a9c9aa7-0a09-c8f5-16b3-55d27fbcd453",
+            "display": "Color of Urine"
+          },
+          {
+            "reference": "urn:uuid:934a8d6a-d70a-c405-c9de-833c0036c06a",
+            "display": "Glucose [Mass/volume] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:5faa7ab8-f7f0-a04d-3c04-5f53d2c437b9",
+            "display": "Glucose [Presence] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:3a0d7eab-e06a-5737-5f29-caa0632aa567",
+            "display": "Bilirubin.total [Mass/volume] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:6f051453-c9a4-aeaf-18d3-f4f542728bab",
+            "display": "Bilirubin.total [Presence] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:a6484ce0-1a59-3db0-f8fe-c4d39045b60f",
+            "display": "Ketones [Mass/volume] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:6b30fbfb-33dc-0350-fcd3-85ebeda2cccb",
+            "display": "Ketones [Presence] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:366d1979-fb55-83b1-3863-aa02e816c1b3",
+            "display": "Specific gravity of Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:f8b370eb-55d1-865e-802a-2edcacd6e451",
+            "display": "pH of Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:ecb4850b-e616-f1f2-7f4f-200a1afbaeb5",
+            "display": "Protein [Mass/volume] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:af85a00a-b35f-b410-872a-241166309458",
+            "display": "Protein [Presence] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:a104b357-0ff2-107e-dff7-3927d518b31f",
+            "display": "Nitrite [Presence] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:79426103-c87d-e6f1-fde9-2107377971f7",
+            "display": "Hemoglobin [Presence] in Urine by Test strip"
+          },
+          {
+            "reference": "urn:uuid:bb58c3f1-7c21-212c-3005-1940f176bc80",
+            "display": "Leukocyte esterase [Presence] in Urine by Test strip"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6bae62a6-30de-8a59-0a4a-2714525035ac",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "6bae62a6-30de-8a59-0a4a-2714525035ac",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "34117-2",
+                "display": "History and physical note"
+              },
+              {
+                "system": "http://loinc.org",
+                "code": "51847-2",
+                "display": "Evaluation + Plan note"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "34117-2",
+              "display": "History and physical note"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "51847-2",
+              "display": "Evaluation + Plan note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:d395ad8d-4e28-f4ae-4041-e4f9b26f02e5"
+        },
+        "encounter": {
+          "reference": "urn:uuid:d93bdb7d-4e17-3fa7-c006-22378dacd792"
+        },
+        "effectiveDateTime": "2023-05-16T13:01:24+08:00",
+        "issued": "2023-05-16T13:01:24.873+08:00",
+        "performer": [
+          {
+            "reference": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999881292",
+            "display": "Dr. Domonique463 Satterfield305"
+          }
+        ],
+        "presentedForm": [
+          {
+            "contentType": "text/plain; charset=utf-8",
+            "data": "DQoyMDIzLTA1LTE2DQoNCiMgQ2hpZWYgQ29tcGxhaW50DQotIEZhdGlndWUNCi0gSHVuZ2VyDQotIFRpbmdsaW5nIGluIEhhbmRzIGFuZCBGZWV0DQotIEJsdXJyZWQgVmlzaW9uDQotIEZyZXF1ZW50IFVyaW5hdGlvbg0KDQoNCiMgSGlzdG9yeSBvZiBQcmVzZW50IElsbG5lc3MNCldhbHRyYXVkNDg4DQogaXMgYSA1MyB5ZWFyLW9sZCBoaXNwYW5pYyB3aGl0ZSBmZW1hbGUuIFBhdGllbnQgaGFzIGEgaGlzdG9yeSBvZiBzZXZlcmUgYW54aWV0eSAocGFuaWMpIChmaW5kaW5nKSwgbWVkaWNhdGlvbiByZXZpZXcgZHVlIChzaXR1YXRpb24pLCB1bmVtcGxveWVkIChmaW5kaW5nKSwgdmljdGltIG9mIGludGltYXRlIHBhcnRuZXIgYWJ1c2UgKGZpbmRpbmcpLCBmcmFjdHVyZWQgZGVudGFsIGZpbGxpbmcgKGZpbmRpbmcpLCBub3QgaW4gbGFib3IgZm9yY2UgKGZpbmRpbmcpLCBwcmltYXJ5IGRlbnRhbCBjYXJpZXMgKGRpc29yZGVyKSwgdW5oZWFsdGh5IGFsY29ob2wgZHJpbmtpbmcgYmVoYXZpb3IgKGZpbmRpbmcpLCBtaXNjYXJyaWFnZSBpbiBmaXJzdCB0cmltZXN0ZXIgKGRpc29yZGVyKSwgbGFjZXJhdGlvbiAtIGluanVyeSAoZGlzb3JkZXIpLCBnaW5naXZpdGlzIChkaXNvcmRlciksIGdpbmdpdmFsIGRpc2Vhc2UgKGRpc29yZGVyKSwgYWx2ZW9saXRpcyBvZiBqYXcgKGRpc29yZGVyKSwgYWN1dGUgdmlyYWwgcGhhcnluZ2l0aXMgKGRpc29yZGVyKSwgbWlzdXNlcyBkcnVncyAoZmluZGluZyksIGNvbXBsZXRlIG1pc2NhcnJpYWdlIChkaXNvcmRlciksIG5vcm1hbCBwcmVnbmFuY3kgKGZpbmRpbmcpLCBwYXJ0LXRpbWUgZW1wbG95bWVudCAoZmluZGluZyksIGJsaWdodGVkIG92dW0gKGRpc29yZGVyKSwgbGltaXRlZCBzb2NpYWwgY29udGFjdCAoZmluZGluZyksIHJlcG9ydHMgb2YgdmlvbGVuY2UgaW4gdGhlIGVudmlyb25tZW50IChmaW5kaW5nKSwgaW5mZWN0aW9uIG9mIHRvb3RoIChkaXNvcmRlciksIGZ1bGwtdGltZSBlbXBsb3ltZW50IChmaW5kaW5nKSwgZGVudGFsIGZpbGxpbmcgbG9zdCAoZmluZGluZyksIGxhY2VyYXRpb24gb2YgdGhpZ2ggKGRpc29yZGVyKSwgc3RyZXNzIChmaW5kaW5nKSwgc29jaWFsIGlzb2xhdGlvbiAoZmluZGluZykuDQoNCiMgU29jaWFsIEhpc3RvcnkNClBhdGllbnQgaXMgc2luZ2xlLiBQYXRpZW50IGhhcyBuZXZlciBzbW9rZWQuDQogUGF0aWVudCBpZGVudGlmaWVzIGFzIGhldGVyb3NleHVhbC4NCg0KUGF0aWVudCBjb21lcyBmcm9tIGEgbWlkZGxlIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4NCiBQYXRpZW50IGhhcyBjb21wbGV0ZWQgc29tZSBjb2xsZWdlIGNvdXJzZXMuDQpQYXRpZW50IGN1cnJlbnRseSBoYXMgTk8gSU5TVVJBTkNFLg0KDQojIEFsbGVyZ2llcw0KTm8gS25vd24gQWxsZXJnaWVzLg0KDQojIE1lZGljYXRpb25zDQpoeWRyb2NobG9yb3RoaWF6aWRlIDI1IG1nIG9yYWwgdGFibGV0OyBqb2xpdmV0dGUgMjggZGF5IHBhY2s7IGluc3VsaW4gaXNvcGhhbmUsIGh1bWFuIDcwIHVudC9tbCAvIGluc3VsaW4sIHJlZ3VsYXIsIGh1bWFuIDMwIHVudC9tbCBpbmplY3RhYmxlIHN1c3BlbnNpb24gW2h1bXVsaW5dOyBpYnVwcm9mZW4gMjAwIG1nIG9yYWwgdGFibGV0OyBzb2RpdW0gZmx1b3JpZGUgMC4wMjcyIG1nL21nIG9yYWwgZ2VsDQoNCiMgQXNzZXNzbWVudCBhbmQgUGxhbg0KUGF0aWVudCBpcyBwcmVzZW50aW5nIHdpdGggbWVkaWNhdGlvbiByZXZpZXcgZHVlIChzaXR1YXRpb24pLiANCg0KIyMgUGxhbg0KDQpUaGUgcGF0aWVudCB3YXMgcHJlc2NyaWJlZCB0aGUgZm9sbG93aW5nIG1lZGljYXRpb25zOg0KLSBpbnN1bGluIGlzb3BoYW5lLCBodW1hbiA3MCB1bnQvbWwgLyBpbnN1bGluLCByZWd1bGFyLCBodW1hbiAzMCB1bnQvbWwgaW5qZWN0YWJsZSBzdXNwZW5zaW9uIFtodW11bGluXQ0KLSBoeWRyb2NobG9yb3RoaWF6aWRlIDI1IG1nIG9yYWwgdGFibGV0DQo="
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DiagnosticReport"
+      }
+    }
+  ]
+}
