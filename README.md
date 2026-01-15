@@ -1,8 +1,8 @@
-# IncreChain
+# <p align="center">IncreChain</p>
 
 <p align="center"><a href="README_zh.md">中文</a> | English</p>
 
-A secure lightweight incremental data sharing framework based on ABE-KDF and blockchain
+<p align="center">A secure lightweight incremental data sharing framework based on ABE-KDF and blockchain</p>
 
 ## 🛠️ Technology Stack
 

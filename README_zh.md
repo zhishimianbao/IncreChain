@@ -1,8 +1,8 @@
-# IncreChain
+# <p align="center">IncreChain</p>
 
-<p align="center">中文 | <a href="README_en.md">English</a></p>
+<p align="center">中文 | <a href="README.md">English</a></p>
 
-一种基于ABE-KDF与区块链的安全轻量增量式数据共享框架
+<p align="center">一种基于ABE-KDF与区块链的安全轻量增量式数据共享框架</p>
 
 ## 🛠️ 技术栈
 
